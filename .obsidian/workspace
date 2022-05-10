@@ -7,8 +7,12 @@
         "id": "3e8444c0448ded62",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "3e8444c0448ded62",
   "lastOpenFiles": [
+    "README.md",
+    "\"Processos.md",
+    "'Processos.md",
     "Processos Estocásticos/Cadeias de Markov em Tempo Discreto.md",
     "Processos Estocásticos/Processos de Decisão Markoviana.md",
     "Processos Estocásticos/Cadeias de Markov Reversíveis.md",
     "Redes de Computadores/Camada de Enlace de Dados.md",
     "GELOS/GELOS - 2022-05-09.md",
     "Redes de Computadores/Transmissão Digital.md",
-    "Base de Dados/Mapeamento de Agregação.md",
-    "GELOS/GELOS - 2022-05-02.md",
-    "GELOS/GELOS - 2022-04-27.md",
-    "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md"
+    "Base de Dados/Mapeamento de Agregação.md"
   ]
 }
