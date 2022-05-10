@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "3e8444c0448ded62",
+        "id": "0a246e82b65db411",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Redes de Computadores/Camada de Enlace de Dados.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Redes de Computadores/Camada de Enlace de Dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3e8444c0448ded62",
+  "active": "0a246e82b65db411",
   "lastOpenFiles": [
+    "Redes de Computadores/Camada de Enlace de Dados.md",
+    "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md",
+    "Base de Dados/Mapeamento de Agregação.md",
+    "Processos Estocásticos/Cadeias de Markov em Tempo Discreto.md",
     "README.md",
+    "Redes de Computadores/Transmissão Digital.md",
     "\"Processos.md",
     "'Processos.md",
-    "Processos Estocásticos/Cadeias de Markov em Tempo Discreto.md",
     "Processos Estocásticos/Processos de Decisão Markoviana.md",
-    "Processos Estocásticos/Cadeias de Markov Reversíveis.md",
-    "Redes de Computadores/Camada de Enlace de Dados.md",
-    "GELOS/GELOS - 2022-05-09.md",
-    "Redes de Computadores/Transmissão Digital.md",
-    "Base de Dados/Mapeamento de Agregação.md"
+    "Processos Estocásticos/Cadeias de Markov Reversíveis.md"
   ]
 }

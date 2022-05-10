@@ -138,4 +138,140 @@ A Ethernet fornece serviços correspondentes às camadas 1 e 2, enquanto a IEEE 
 ![[Pasted image 20220505154814.png]]
 
 
+**Funcão da Camada de Enlace de Dados** -> Transferir dados da camada de rede da máquina de **origem** para a camada de rede da máquina **destino**.
 
+![[Pasted image 20220510143017.png]]
+- Lida com quadros -> grupos de bits transmitidos pela rede
+- Depede da camada Física para enviar/receber bits
+
+- **Controle de Enlace Lógico (LLC)** -> Fornece mecanismos de multiplexação e controle de fluxo.
+- **Controle de Acesso ao Meio (MAC)** -> Provê acesso a um canal de comunicação e o endereçamento neste canal.
+
+![[Pasted image 20220510143240.png]]
+- Dois elementos físicos **fisicamente conectados**:
+	- Host-Roteador, roteador-roteador, host-host
+- Unidade de dados: quadro(*frame*)
+
+![[Pasted image 20220510143333.png]]
+
+### Serviços
+
+- Delimitação de quadros (enquadramento ou framing)
+	- Divide e encapsula pacotes em quadros
+	- Acrescenta "endereços físicos" usados nos cabeçalhos dos quadros para identificar a fonte e o destino dos quadros.
+- Acesso ao enlace:
+	- Implementa acesso ao canal se o meio é compartilhado
+- Entrega confiável entre os dois equipamentos fisicamente conectados:
+	- Raramente usado em enlaces com baixa taca de erro (fibra, alguns tipos de par traçado)
+	- Enlaces sem fio (wireless) -> altas taxas de erro.
+- **Controle de Fluxo**
+	- Limitação da transmissão entre transmissor e receptor
+- **Detecção de erros**
+	- Erros causados pela atenuação do sinal e ruídos
+	- Receptor detecta erro e pede para reenviar o quadro perdido.
+- **Correção de Erros**
+	- Receptor identifica e corrige o bit com erro(s) sem recorrer à retransmissão.
+
+### Protocolos
+A maioria dos protocolos de enlace possuem os seguintes elementos:
+
+- **Cabeçalho** -> possui informações de controle para que haja a comunicação horizontal entre as camadas de enlace da origem e destino. É formado por diversos campos, cada um com uma função específica no protocolo.
+- **Dados** -> Encapsula o PDU de rede passando pela camada de rede.
+- **Código de Detecção de Erro (CDE)** -> tem a função de controlar erros na camada de enlace.
+![[Pasted image 20220510144052.png]]
+
+### Tipos de Serviços
+
+Os serviços são fornecidos nas seguintes combinações:
+
+- Serviço sem conexão não confirmado
+- Serviço sem conexão confirmado
+- Serviço orientado a conexão confirmado
+
+#### Serviço sem Conexão não Confirmado
+- Conexão não é previamente estabelecida
+- A máquina emissora envia *frames* sem receber confirmação de recebimento da máquina receptora
+- Quadros perdidos são ignorados e tratados pelas camadas superiores
+- Apropriado para:
+	- Aplicações onde a taxa de erro é muito baixa
+	- Aplicações de tempo real onde dados atrasados são piores que dados ruins, como streaming de áudio
+- Serviço normalmente usado em LANs
+
+#### Serviço sem Conexão Confirmado
+- Conexão náo e estabelecida previamente
+- Cada *frame* enviado é individualmente confirmado. Dessa forma o emissor sabe se o *frame* foi recebido ou não e poderá enviá-lo novamente
+- Origem usa um mecanismo de temporização para reenviar quadros não confirmados
+- Útil para canais não confiáveis, como Wireless
+
+#### Serviço Orientado à Conexão Confirmado
+- Mais sofisticado
+- Emissor e receptor estabelecem conexão antes do envio de dados;
+- Cada *frame* enviado é numerado
+- Cada *frame* é recebido exatamente uma vez e todos os *frames* chegam em ordem
+- O serviço oferecido para a camada de rede é uma sequência de bits corretos
+
+**Considerações:**
+- Confirmação na camada de enlace é uma otimização, não um requisito -> pode ser deixada para a camada de transporte (fim-a-fim)
+- O serviço a ser oferecido para a camada de rede depende, dentre outros fatores, da aplicação que utilizará esse serviço.
+
+### Delimitação de Quadros
+- A camada física transmite uma sequência de bits (bit stream), que pode ser grande e conter erros;
+- A camada de enlace deve detectar e, se necessário, corrigir os erros de transmissão
+- A sequência de bits é quebrada em *frames*.
+
+#### Métodos para Delimitação de Quadros
+- Contagem de Caracteres
+- Caracteres de início e de fim, com caractere de preenchimento
+- Flags de início e de fim, com caractere de preenchimento
+- Flasg de início e de fim, com caractere de preenchimento;
+- Violação de código da camada física
+
+#### Contagem de Caracteres
+Usa um campo no cabeçalho para indicar o número de caracteres no quadro.
+
+**Problema**: o caractere de contagem pode sofrer erro de transmissão, impossibilitando o reconhecimento do início do próximo quadro;
+
+Assim, **não é** usado na prática para protocolos da camada de enlace.
+
+![[Pasted image 20220510152747.png]]
+
+#### Caracteres de Início e de Fim
+Reconhecimento do início e do fim de um quadro através dos caracteres ASCII:
+
+- **Início:** DLE STX (Data Link Scape, Start TeXt)
+- **De Fim**: DLE ETC (Data Link Scape, End of TeXt)
+
+**->** Método usado em protocolos orientados a caracteres.
+
+- Se os caracteres oara DLE STX e DLE ETX ocorrem nos dados -> Inserir um caracter DLE adicional antes de cada DLE nos dados (*byte stuffing*)
+
+Técnica presa ao código ASCII e a caracteres de 8bits.
+
+![[Pasted image 20220510153208.png]]
+
+#### Flags de início e de fim
+Permite codificar caracteres com um número arbitrário de bits por caractere, usando um padrão especial de bits (*flag*) para sinalizar início e fim do quadro
+
+- Sempre que 5 "ums" (1s) consecutivos são encontrados nos dados, o emissor insere um zero (*bit stuffing*), para que não haja a interpretação de um flag de entrada/saída no meio do dado.
+
+- Quando o receptor encontra cinco "ums" seguidos por um zero, o *stuff* é retirado
+
+![[Pasted image 20220510153430.png]]
+
+#### Violação de Código
+- Baseado em características da camada física (por isso violação)
+- O início e fim do quadro é definido pela utilização de um código de transmissão inválido.
+- Por serem sinais reservados, não é necessário inserir bytes ou bits de dados
+- São fáceis de serem identificados
+
+![[Pasted image 20220510154859.png]]
+
+Bits a serem transmitidos -> 01000111111000110001000001111110
+
+a) Contagem de Caracteres: 01000111111000110001000001111110
+
+b) Caracteres de Início e Fim: 000100000000001001000111111000110001000000010000011111100001000000000011
+
+c) Flags de Início e Fim:
+
+01111110010001111101000110001000001111101001111110
