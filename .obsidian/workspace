@@ -1,0 +1,98 @@
+{
+  "main": {
+    "id": "9df9e1912c3cc1d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e8444c0448ded62",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "64c324c1ba6456dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "35622a29c1d911cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36347e2c113d89ca",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "601b7f64f7b92815",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 274
+  },
+  "right": {
+    "id": "377e1a9f08ae5d40",
+    "type": "split",
+    "children": [
+      {
+        "id": "e912235948c92c4b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a766dbfb77537835",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3e8444c0448ded62",
+  "lastOpenFiles": [
+    "Processos Estocásticos/Cadeias de Markov em Tempo Discreto.md",
+    "Processos Estocásticos/Processos de Decisão Markoviana.md",
+    "Processos Estocásticos/Cadeias de Markov Reversíveis.md",
+    "Redes de Computadores/Camada de Enlace de Dados.md",
+    "GELOS/GELOS - 2022-05-09.md",
+    "Redes de Computadores/Transmissão Digital.md",
+    "Base de Dados/Mapeamento de Agregação.md",
+    "GELOS/GELOS - 2022-05-02.md",
+    "GELOS/GELOS - 2022-04-27.md",
+    "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md"
+  ]
+}
