@@ -17,12 +17,12 @@ Algumas notas das aulas do BCC - ICMC/USP
 
 		- [Cadeias de Markov Reversíveis](https://github.com/gp2112/notas-de-aulas/blob/main/Processos%20Estoc%C3%A1sticos/Cadeias%20de%20Markov%20Revers%C3%ADveis.md)
 
-		- [Processos de Decisão Markoviana](https://github.com/gp2112/notas-de-aulas/blob/main/Processos%20Estoc%C3%A1sticos/Processos de Decisão Markoviana.md")
+		- [Processos de Decisão Markoviana](https://github.com/gp2112/notas-de-aulas/blob/main/Processos%20Estoc%C3%A1sticos/Processos%20de%20Decis%C3%A3o%20Markoviana.md")
 
 
 - [Redes de Computadores](https://github.com/gp2112/notas-de-aulas/tree/main/Redes%20de%20Computadores)
 
-	- [Transmissão DIgital](https://github.com/gp2112/notas-de-aulas/blob/main/Redes%20de%20Computadores/Transmissão Digital.md)
+	- [Transmissão DIgital](https://github.com/gp2112/notas-de-aulas/blob/main/Redes%20de%20Computadores/Transmiss%C3%A3o%20Digital.md)
 
 	- [Camada de Enlace de Dados](https://github.com/gp2112/notas-de-aulas/blob/main/Redes%20de%20Computadores/Camada%20de%20Enlace%20de%20Dados.md)
 
