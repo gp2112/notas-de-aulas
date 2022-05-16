@@ -1,6 +1,11 @@
 # Notas de Aulas
 Algumas notas das aulas do BCC - ICMC/USP
 
+## Obsidian
+Recomendo o uso do editor [Obsidian](https://obsidian.md/) pra visualizar/editar as notas. 
+
+Sem ele, algumas funcionalidades não serão bem aproveitadas :/
+
 ### Disciplinas
 
 - [Base de Dados](https://github.com/gp2112/notas-de-aulas/tree/main/Base%20de%20Dados)
