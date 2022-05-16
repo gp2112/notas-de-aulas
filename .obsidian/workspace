@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Redes de Computadores/Camada de Enlace de Dados.md",
+            "file": "Base de Dados/Normalização e Dependências Funcionais.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Redes de Computadores/Camada de Enlace de Dados.md",
+                "file": "Base de Dados/Normalização e Dependências Funcionais.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "0a246e82b65db411",
   "lastOpenFiles": [
-    "Redes de Computadores/Camada de Enlace de Dados.md",
+    "Base de Dados/Normalização e Dependências Funcionais.md",
+    "Base de Dados/Dependência Multivalorada.md",
+    "Base de Dados/4a Forma Normal.md",
+    "Base de Dados/exercícios/Normalização 1.md",
     "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md",
+    "Redes de Computadores/Camada de Enlace de Dados.md",
+    "Redes de Computadores/Untitled.md",
     "Base de Dados/Mapeamento de Agregação.md",
     "Processos Estocásticos/Cadeias de Markov em Tempo Discreto.md",
-    "README.md",
-    "Redes de Computadores/Transmissão Digital.md",
-    "\"Processos.md",
-    "'Processos.md",
-    "Processos Estocásticos/Processos de Decisão Markoviana.md",
-    "Processos Estocásticos/Cadeias de Markov Reversíveis.md"
+    "README.md"
   ]
 }

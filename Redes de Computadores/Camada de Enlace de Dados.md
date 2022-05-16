@@ -275,3 +275,104 @@ b) Caracteres de Início e Fim: 000100000000001001000111111000110001000000010000
 c) Flags de Início e Fim:
 
 01111110010001111101000110001000001111101001111110
+
+### Controle de Erros
+Qualquer transmissão está sujeita a problemas, como ruídos e atenuação.
+Como ter certeza que todos os quadros transmitidos foram entregues à camada de rede do destino, e na órdem correta?
+
+- A camada de enlace **deve** realizar o tratamento de possíveis erros
+
+- O controle de erros envolve duas etapas:
+	- Detecção dos possíveis erros nos dados transmitidos
+	- Correção dos erros encontrados
+
+- O mecanismo de detecção de erro é semelhante ao esquema do dígito verificador co códigos de barra, CPF, etc...
+
+- O dígito verificador é gerado a partir dos números que compõe os números antecessores, utilizando uma função previamente definida.
+
+- Antes de enviar uma mensagem o transmissor utiliza uma função para gerar um Código de Detecção de Erro (CDE) a partir da mensagem a ser enviada, de forma a gerar uma espécie de dígito verificador. Esse código é adicionado ao quadro que será enviado.
+
+![[Pasted image 20220512143502.png]]
+#### Bit de Paridade Simples
+- Insere-se 1 bit extra ao final de cada caractere de modo a deixar todos os caracteres com um número **par** ou **ímpar** de bits 1
+- Se ocorrerem um número par de erros eles não serão detectados
+- Este esquema deve ser usado apenas em transmissões de baixa velocidade ou que são menos instáveis
+
+#### Bit de paridade Bidimensional
+- Os bits são divididos em i linhas e j colunas
+- Para cada linha e coluna é calculado um bit de paridade
+
+![[Pasted image 20220512150506.png]]
+- Possível fazer correção no caso de um erro, mas não em dois erros em linhas ou colunas consecutivas
+
+#### Checksum
+- Indica um grupo de bits de verificação, independentemente de como são calculados.
+	- Um grupo de bits de paridade por ser exemplo de checksum
+	- Existem *checksums* mais robustos que os bits de paridade
+- Opera sobre palavras, não bits
+- Erros que passam pelos bits de paridade podem ser encontrados
+- **Exemplo**: Protocolo IP - soma de verificação de 16 bits.
+
+- **Transmissor**:
+	- Divide a mensagem em *k* seguimentos de *n* bits
+	- Soma os *k* caracteres
+	- Forma o checksum com o complemento da soma
+	- Envia a mensagem junto como checksum
+	
+![[Pasted image 20220512150902.png]]
+- **Receptor**:
+	- Divide a mensagem em *k* seguimentos de *n* bits
+	- Soma os *k* seguimentos
+	- Forma o *Checksum* com o complemento da soma
+	- Se o *checksum* for igual a zro, dados aceitos!
+
+![[Pasted image 20220512151010.png]]
+
+#### Verificação de Redundância Cíclica (CRC)
+*Cyclic Redundancy Check*, também conhecido como código polinomial
+
+- Técnica mais utilizada
+- Detecta erros num segmento transmitido.
+![[Pasted image 20220512151126.png]]
+- Emissor/Receptor concordam com uma sequência de bits que representa o gerador ***G*** com $(r+1)$ bits de comprimento e que tem o bit mais significativo (mais a esquerda) como 1
+- **Ideia**: sequência de bits a ser transmitida D com d bits com a soma de verificação deve ser divisível pelo gerador
+- Receptor tenta dividir pelo gerador. Se houver resto, houve um erro de transmissão
+![[Pasted image 20220512151542.png]]
+
+- O gerador usado no padrão IEEE 802 é: <span style="color:red">100000100110000010001110110110111</span>
+- Para se calcular R, realiza-se o processo de divisão longa ao se subtrair o gerador, caso o bit mais significativo em questão seja 1 ou, caso contrário, o seu múltiplo por 0.
+- Na aritmética de módulo 2, tanto as adições quanto as subtrações são idênticas à operação XOR.
+
+#### Código de Hamming
+- Detecção (e correção) de erros em transmissões de dados binários
+- Emprega o **bit stuffing** com paridade para assegurar que eventuais erros sejam detectados
+- É geralmente usado para comunicações em que a retransmissão é custosa e existe uma baixa taxa de erros.
+- Os bits que são potências de 2 são bits de paridade e o restante são bits de dados.
+- Vários bits de paridade são acrescentados usando regras especiais
+- Com esta redundância é possível corrigir erros
+- Um quadro possui $m$ bits de dados e $r$ bits redundantes
+- O tamanho total $n$ é dado por $m+r$
+- Essa unidade de $n$ bits é chamada de **palavra de código - codeword**
+- Os bits são numerados
+- Bits que são potência de dois são de verificação (1, 2, 4, ...)
+- Os demais são dados (3,5,6,7)
+- Cada bit de verificação força a paridade de um conjunto de bits (paridade par ou ímpar)
+- Um bit pode ser incluído em vários cálculos de verificação
+- Para saber para quais bits de verificação o bit na posição $k$ contribui, represetar como uma soma das potências de 2.
+- Exemplo:
+	- para $k=11: 11=1+2+8$
+	- para $k=5: 5=1+4$
+
+- Cada bit de dado é considerado em um conjunto de bits de paridade, de acordo com sua posição na forma binária:
+	- O bit de paridade 1 cobre todas as posições cuja representação binária incluem 1 no bit menos significativo (1, 3, 5, 7...)
+	- O bit de paridade 2 cobre todas as poições cuja representação binária incluem 1 no segundo bit menos significativo (2, 3, 6, 7....)
+
+![[Pasted image 20220512154352.png]]
+
+Se quisermos enviar os bits $1011001$ , eles devem ser dispostos da seguinte maneira:
+![[Pasted image 20220512154430.png]]
+Usando paridade par, o primeiro bit de paridade é o $0$.
+![[Pasted image 20220512154501.png]]
+Usando paridade par, o segundo bit de paridade é 1
+
+![[Pasted image 20220512154524.png]]
