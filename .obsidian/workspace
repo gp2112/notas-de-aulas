@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base de Dados/Normalização e Dependências Funcionais.md",
+            "file": "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base de Dados/Normalização e Dependências Funcionais.md",
+                "file": "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "0a246e82b65db411",
   "lastOpenFiles": [
+    "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
+    "Redes de Computadores/Acesso ao Enlace.md",
+    "Redes de Computadores/Piggybacking.md",
+    "Redes de Computadores/Protocolo RS-232.md",
+    "Redes de Computadores/Camada de Enlace de Dados.md",
     "Base de Dados/Normalização e Dependências Funcionais.md",
     "Base de Dados/Dependência Multivalorada.md",
     "Base de Dados/4a Forma Normal.md",
     "Base de Dados/exercícios/Normalização 1.md",
-    "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md",
-    "Redes de Computadores/Camada de Enlace de Dados.md",
-    "Redes de Computadores/Untitled.md",
-    "Base de Dados/Mapeamento de Agregação.md",
-    "Processos Estocásticos/Cadeias de Markov em Tempo Discreto.md",
-    "README.md"
+    "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md"
   ]
 }
