@@ -78,4 +78,4 @@ Baseado em 5 premissas:
 - *Broadcast* (fio ou meio compartilhado, ex: Ethernet)
 - *Switched* (Ex: switched Ethernet, ATM, etc)
 
-
+[[Ethernet]]

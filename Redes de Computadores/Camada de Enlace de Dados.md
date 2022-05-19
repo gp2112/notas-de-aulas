@@ -376,3 +376,8 @@ Usando paridade par, o primeiro bit de paridade é o $0$.
 Usando paridade par, o segundo bit de paridade é 1
 
 ![[Pasted image 20220512154524.png]]
+[[Acesso ao Enlace]]
+[[Protocolos de Acesso Múltiplo]]
+
+[[Controle de Enlace Ponto-a-Ponto]]
+[[Camada de Enlace - Comutadores]]

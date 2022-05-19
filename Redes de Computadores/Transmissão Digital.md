@@ -213,3 +213,5 @@ sinal digital.
 • Os receptores que tamb ́em conhecem os respectivos  
 c ́odigos bin ́arios podem recuperar o sinal digital a partir do  
 sinal combinado.
+
+[[Camada de Enlace de Dados]]

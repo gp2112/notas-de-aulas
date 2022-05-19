@@ -66,3 +66,6 @@ Algorítmo distribuído que determina como as estações compartilham o canal, i
 	- *Polling Overhead* 
 	- Latência (atraso de seleção)
 	- Ponto único de falha (mestre)
+
+[[Piggybacking]]
+[[Resumo MAC]]

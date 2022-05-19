@@ -7,12 +7,8 @@
         "id": "0a246e82b65db411",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -53,7 +49,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274
+    "width": 274,
+    "collapsed": true
   },
   "right": {
     "id": "377e1a9f08ae5d40",
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +85,15 @@
   },
   "active": "0a246e82b65db411",
   "lastOpenFiles": [
-    "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
-    "Redes de Computadores/Acesso ao Enlace.md",
-    "Redes de Computadores/Piggybacking.md",
-    "Redes de Computadores/Protocolo RS-232.md",
+    "Redes de Computadores/Transmissão Digital.md",
+    "Redes de Computadores/Camada de Enlace - Comutadores.md",
     "Redes de Computadores/Camada de Enlace de Dados.md",
-    "Base de Dados/Normalização e Dependências Funcionais.md",
-    "Base de Dados/Dependência Multivalorada.md",
-    "Base de Dados/4a Forma Normal.md",
-    "Base de Dados/exercícios/Normalização 1.md",
-    "Base de Dados/Mapeamento entre Esquemas - Abstrações - Generalização.md"
+    "Redes de Computadores/Acesso ao Enlace.md",
+    "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
+    "Redes de Computadores/Ethernet.md",
+    "Redes de Computadores/Piggybacking.md",
+    "Redes de Computadores/Endereços de LAN e ARP.md",
+    "Redes de Computadores/Controle de Enlace Ponto-a-Ponto.md",
+    "Redes de Computadores/Resumo MAC.md"
   ]
 }
