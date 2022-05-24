@@ -85,3 +85,4 @@ Sejam $X_1, X_2$ variáveis aleatórias independentes, então:
 - Se $X_i \sim Exp(\lambda)$ e $Y = X_1 + X_2$
 
 $F_y(y) = \int \int_{x_1+x_2\leqy} f_{x_1}(u)f_{x_2}(v) dudv$
+

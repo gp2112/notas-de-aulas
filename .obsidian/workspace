@@ -7,8 +7,12 @@
         "id": "0a246e82b65db411",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Processos Estocásticos/Processo de Poisson 2.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -66,6 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Processos Estocásticos/Processo de Poisson 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,6 +90,8 @@
   },
   "active": "0a246e82b65db411",
   "lastOpenFiles": [
+    "Processos Estocásticos/Processo de Poisson 2.md",
+    "Processos Estocásticos/Processo de Poisson 1.md",
     "Redes de Computadores/Transmissão Digital.md",
     "Redes de Computadores/Camada de Enlace - Comutadores.md",
     "Redes de Computadores/Camada de Enlace de Dados.md",
@@ -92,8 +99,6 @@
     "Redes de Computadores/Protocolos de Acesso Múltiplo.md",
     "Redes de Computadores/Ethernet.md",
     "Redes de Computadores/Piggybacking.md",
-    "Redes de Computadores/Endereços de LAN e ARP.md",
-    "Redes de Computadores/Controle de Enlace Ponto-a-Ponto.md",
-    "Redes de Computadores/Resumo MAC.md"
+    "Redes de Computadores/Endereços de LAN e ARP.md"
   ]
 }
