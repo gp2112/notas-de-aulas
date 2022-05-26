@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Processos Estocásticos/Processo de Poisson 2.md",
+            "file": "Redes de Computadores/Camada de Rede da Internet.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Processos Estocásticos/Processo de Poisson 2.md",
+                "file": "Redes de Computadores/Camada de Rede da Internet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,15 +90,15 @@
   },
   "active": "0a246e82b65db411",
   "lastOpenFiles": [
+    "Redes de Computadores/Camada de Rede da Internet.md",
+    "Redes de Computadores/Roteamento e Algoritmos.md",
+    "Redes de Computadores/Camada de Rede.md",
     "Processos Estocásticos/Processo de Poisson 2.md",
     "Processos Estocásticos/Processo de Poisson 1.md",
     "Base de Dados/Linguagem SQL.md",
-    "Redes de Computadores/Roteamento e Algoritmos.md",
-    "Redes de Computadores/Camada de Rede.md",
     "Redes de Computadores/Camada de Enlace de Dados.md",
     "Redes de Computadores/Redes.md",
     "Redes de Computadores/Transmissão Digital.md",
-    "Redes de Computadores/Camada de Enlace - Comutadores.md",
-    "Redes de Computadores/Acesso ao Enlace.md"
+    "Redes de Computadores/Camada de Enlace - Comutadores.md"
   ]
 }

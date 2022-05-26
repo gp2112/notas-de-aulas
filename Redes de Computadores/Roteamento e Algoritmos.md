@@ -105,3 +105,6 @@ Determinar "bons" caminhos (sequência de roteadores) através da rede da fonte 
 - realizam roteamento intra-AS com os outros roteadores do mesmo AS
 
 ![[Pasted image 20220524174329.png]]
+**Exemplo:**  envio de mensagem do *host* h1 ao *host* h2
+
+![[Pasted image 20220526143231.png]]
