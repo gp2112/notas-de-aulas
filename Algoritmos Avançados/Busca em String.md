@@ -1,5 +1,7 @@
 # Busca em String
 
+Por Guilherme Paixão
+
 Dado duas *strings*, quão semelhante elas são? 
 Como quantificar isso?
 
@@ -85,7 +87,7 @@ int solve(int i, int j) {
 				alpha(i,j)+solve(i-1, j-1),
 				delta + solve(i-1, j),
 				delta + solve(i, j-1)
-			)
+			);
 
 }
 ```
@@ -97,7 +99,10 @@ Apesar de mais fácil de modelar e desse algoritmo ser ótimo, sua implementaç�
 Para cada chamada da função *solve*, ela vai se chamar, novamente, 3 vezes. Isso gera uma árvore com, praticamente, 3 nós em cada nível.
 
 
-![[Pasted image 20220527154913.png]]
+![]("imgs/Pasted image 20220527154913.png")
+
+![dd]("imgs/Pasted image 20220527154913.png")
+
 A altura H da árvore será sempre em função do tamanho das duas strings, n e m, sendo que seu limite superior será a combinação linear de m e n.
 
 $H(m,n) \leq \alpha m + \beta n$
@@ -114,9 +119,104 @@ Como $H(m,n) \in O(m+n)$
 
 $N \leq 3^{O(m,n)} \therefore N \in O(3^{m+n})$ 
 
-**Conclusão:** A função que implementamos é $O(3^{m+n})$ que é exponencial, dendo computacionalmente inviável de se computar para números nem tão grandes assim.
+**Conclusão:** A função que implementamos é $O(3^{m+n})$ que é exponencial, sendo computacionalmente inviável para números nem tão grandes assim.
 
 ## Utilizando Programação Dinâmica
 Mas, felizmente, existe uma forma de melhorar, e muito, essa complexidade utilizando programação dinâmica!
 
-Perceba na árvore de chamadas da função que ocorrem muitas redundâncias. Podemos evitar essas chamadas
+Perceba na árvore de chamadas da função que ocorrem muitas redundâncias. Podemos evitar realizar mais de uma chamada com mesmos parâmetros 
+armazenando seus resultados em memória.
+
+Existem dois jeitos de se fazer programação dinâmica: com uma abordagem *top-down*, como fizemos acima, ou *bottom-up*. Na abordagem de PD por *top-down*, utilizamos o método de *Memoization*, e na *bottom-up*, usamos o *tabulation*. 
+
+### *Memoization*
+
+Já que fizemos acima um algoritmo guloso utilizando *top-down*, vamos fazer o mesmo com programação dinâmica, usando o *Memoization*.
+
+Primeiro criarei um *array* de tamanho *MAX* para salvar os resultados da nossa função $solve$.
+Esse deverá ser um *array* bidimensional, já que nossa função recebe 2 parâmetros. Então temos:
+
+```c++
+const int MAX = 1000;
+int MEMO[MAX][MAX];
+```
+Agora, a fim de podermos saber se o valor e uma posição $i,j$ do array já foi calculado, devemos inicializa-lo com algum valor para representar um espaço "vazio". Sabems que, por $i,j$ serem índices das *strings*, eles não podem ser menores que zero. Então vamos atribuir $-1$ a todo o espaço do *array Memo*. 
+
+Para isso, podemos usar a função *memset* do *cstring*:
+
+```c++
+memset(MEMO, -1, sizeof MEMO);
+```
+
+E agora basta a gente substituir as chamadas de da função para os valores que já foram calculados:
+
+
+```c++
+
+int solve(int i, int j) {
+    if (i==0)
+        return j*delta;
+    if (j==0)
+        return i*delta;
+
+    // se o valor já existe, não continua mais
+    if (MEMO[i][j] != -1)
+        return MEMO[i][j];
+
+    MEMO[i][j] = min (
+                    alpha(i,j)+solve(i-1,j-1);
+                    delta+solve(i-1,j),
+                    delta+solve(i,j-1)
+                );
+    return MEMO[i][j];
+    
+}
+
+```
+
+Como podemos ver, sempre que o estado $i,j$ já tiver sido computado, reaproveitaremos esse resultado através do valor armazenado no *arrray*.
+
+### Tabulation
+
+A otimização com *Memoization* já foi muito boa: reduziu um algoritmo que errra exponencial em polinomial!
+
+Mas ainda dá para melhorar, dependendo da situação. Como dá para perceber, o *Memoization* ainda realiza chamadas recursivas, que consomem memória. Então, além de gastar com memória extra para armazenar os resultados, ainda gasta mais com cada chamada da função.
+
+Com o método do *Tabulation*, é possível fazer o mesmo algoritmo de forma iterativa, realizando assim appenas uma chamada de função.
+
+Dessa vez, irei chamar no *array* de *TAB*, e irei usar $M$ como sendo o tamanho da primeira string e $N$ como o tamanho da segunda:
+
+```c++
+const int MAX 1000; 
+int TAB[MAX][MAX];
+```
+
+```c++
+
+int solve() {
+    int i, j;
+
+    // preenchemos os valores iniciais de TAB com 
+    // os valores retornados na condição de parada
+    for (j=0; j<N; j++)
+        TAB[0][j] = j*delta;
+
+    for (i=0; i<M; i++)
+        TAB[i][0] = i*delta;
+
+    for (i=0; i<N; i++)
+        for (j=0; j<M; j++) 
+            TAB[i+1][j+1] = min(
+                                alpha(i+1,j+1)+TAB[i][j],
+                                delta+TAB[i][j+1],
+                                delta + TAB[i+1][j]
+                            );
+    return TAB[M][N];
+
+}
+
+Podemos ver que, para cada umma de N operações, o programa fará mais M.
+
+Ou seja, podemos concluir que sua complexidade, no pior cenário, será O(NM), MUITO menor que o exponencial anterior!
+
+```
