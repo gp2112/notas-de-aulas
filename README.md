@@ -55,3 +55,10 @@ Algumas notas das aulas do BCC - ICMC/USP
 
         - [Camada de Rede da Internet](https://github.com/gp2112/notas-de-aulas/blob/main/Redes%20de%20Computadores/Camada%20de%20Rede%20da%20Internet.md)
 
+- [Algoritmos Avançados](https://github.com/gp2112/notas-de-aulas/tree/main/Algoritmos%20Avan%C3%A7ados)
+
+    - [Programação Dinâmica](https://github.com/gp2112/notas-de-aulas/blob/main/Algoritmos%20Avan%C3%A7ados/Programa%C3%A7%C3%A3o%20Din%C3%A2mica.md)
+
+    - [Busca em String](https://github.com/gp2112/notas-de-aulas/blob/main/Algoritmos%20Avan%C3%A7ados/Busca%20em%20String.md)
+
+
