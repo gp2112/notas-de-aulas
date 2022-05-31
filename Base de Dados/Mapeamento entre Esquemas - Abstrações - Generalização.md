@@ -23,7 +23,7 @@
 	* **Procedimento padrão** de mapeamento
 
 #### Os 9 Procedimentos Padrão
-![[Pasted image 20220502091044.png]]
+![Pasted image 20220502091044](imgs/Pasted%20image%2020220502091044.png)
 
 #### Alternativa 1 
 * **Mapear o CEG e os CEEs em Relações Diferentes**
@@ -37,21 +37,21 @@
 
  **Procedimento Padrão 1**
 
-![[Pasted image 20220502085044.png]]
+![Pasted image 20220502085044](imgs/Pasted%20image%2020220502085044.png)
 **Exemplo:** como mapear?
 
-![[Pasted image 20220502085152.png]]
+![Pasted image 20220502085152](imgs/Pasted%20image%2020220502085152.png)
 * A ocorrência da generalização deve ser **mutualmente exclusiva** (disjunção). 
 
 * **Procedimento padrão 2**
-![[Pasted image 20220502085305.png]]
+![Pasted image 20220502085305](imgs/Pasted%20image%2020220502085305.png)
 **Exemplo:** Como mapear?
 
-![[Pasted image 20220502085338.png]]
+![Pasted image 20220502085338](imgs/Pasted%20image%2020220502085338.png)
 * Semelhante ao procedimento 1: Usado quando a Generalização é definida com **sobreposição**
 
 **Procedimento Padrão 3**
-![[Pasted image 20220502085700.png]]
+![Pasted image 20220502085700](imgs/Pasted%20image%2020220502085700.png)
 
 #### Alternativa 2
 * **Mapear o CEG e todos os CEEs em uma Única Relação**
@@ -64,26 +64,26 @@
 
 
 **Procedimento Padrão 4**
-![[Pasted image 20220502085915.png]]
+![Pasted image 20220502085915](imgs/Pasted%20image%2020220502085915.png)
 **Exemplo:** Como mapear?
 
-![[Pasted image 20220502085938.png]]
+![Pasted image 20220502085938](imgs/Pasted%20image%2020220502085938.png)
 * Generalização deve ser **mutuamente exclusiva**
 	* em cada tupla apenas os atributos correspondentes ao subtipo da entidadepodem possuir valor
 	* os atributos correspondentes aos demais subtipos devems er sempre mantidos nulos
 
 **Procedimento padrão 5**
-![[Pasted image 20220502090106.png]]
-![[Pasted image 20220502090122.png]]
+![Pasted image 20220502090106](imgs/Pasted%20image%2020220502090106.png)
+![Pasted image 20220502090122](imgs/Pasted%20image%2020220502090122.png)
 * Generalização definida com **sobreposição**
 * Se uma entidade pertence a um CEE, então na tupla **pelo menos 1 atributo** correspondente ao CEE deve possuir **valor não nulo**
 
 **Exemplo:** Como mapear?
 
-![[Pasted image 20220502090244.png]]
+![Pasted image 20220502090244](imgs/Pasted%20image%2020220502090244.png)
 **Procedimento Padrão 6**
-![[Pasted image 20220502090307.png]]
-![[Pasted image 20220502090315.png]]
+![Pasted image 20220502090307](imgs/Pasted%20image%2020220502090307.png)
+![Pasted image 20220502090315](imgs/Pasted%20image%2020220502090315.png)
 * Indica quais CEEs uma entidade pertence usando valores booleanos
 
 #### Alternativa 3
@@ -95,36 +95,36 @@
 
 **Procedimento Padrão 7**
 
-![[Pasted image 20220502090729.png]]
+![Pasted image 20220502090729](imgs/Pasted%20image%2020220502090729.png)
 **Exemplo:** Como Mapear?
 
-![[Pasted image 20220502090752.png]]
-![[Pasted image 20220502090803.png]]
+![Pasted image 20220502090752](imgs/Pasted%20image%2020220502090752.png)
+![Pasted image 20220502090803](imgs/Pasted%20image%2020220502090803.png)
 
 **Procedimento Padrão 8**
 
 **Exemplo:**: Como Mapear?
-![[Pasted image 20220502090856.png]]
+![Pasted image 20220502090856](imgs/Pasted%20image%2020220502090856.png)
 
 **Procedimento Padrão 9**
 
-![[Pasted image 20220502090914.png]]
+![Pasted image 20220502090914](imgs/Pasted%20image%2020220502090914.png)
 **Exemplo:** Como mapear?
 
-![[Pasted image 20220502090944.png]]
+![Pasted image 20220502090944](imgs/Pasted%20image%2020220502090944.png)
 
 
 #### Casos Especiais
 * Atributos específicos que podem identificar univocamente o CEE podem ser colocados como chaves secundárias
 
-![[Pasted image 20220502091144.png]]
+![Pasted image 20220502091144](imgs/Pasted%20image%2020220502091144.png)
 
 ### Exercício
-![[Pasted image 20220502091205.png]]
+![Pasted image 20220502091205](imgs/Pasted%20image%2020220502091205.png)
 
 ---
 ## Bibliografia
-[[Mapeamento de Agregação]]
+[Mapeamento de Agregação](Mapeamento%20de%20Agrega%C3%A7%C3%A3o.md)
 
 ---
 Material coletado e adaptado por Guilherme Paixão dos slides feitos pela professora Elaine Parros Machado de Sousa para a disciplina de Bases de Dados, ICMC-USP. 

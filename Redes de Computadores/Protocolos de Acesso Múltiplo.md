@@ -47,7 +47,7 @@ Algorítmo distribuído que determina como as estações compartilham o canal, i
 - Em todos, havendo colisão, aguarda tempo aleatório.
 
 #### Comparação de acordo com o *throughtput*
-![[Pasted image 20220517175223.png]]
+![Pasted image 20220517175223](imgs/Pasted%20image%2020220517175223.png)
 
 ### CSMA/CD - CSMA / Detecção de Colisão
 - Escuta o canal enquanto transmite
@@ -67,5 +67,5 @@ Algorítmo distribuído que determina como as estações compartilham o canal, i
 	- Latência (atraso de seleção)
 	- Ponto único de falha (mestre)
 
-[[Piggybacking]]
-[[Resumo MAC]]
+[Piggybacking](Piggybacking.md)
+[Resumo MAC](Resumo%20MAC.md)

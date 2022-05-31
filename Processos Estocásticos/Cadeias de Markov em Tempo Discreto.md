@@ -41,6 +41,6 @@ Precisamos então das distribuições condicionais de $X_t|X_{t-1}, t=1,2,...,n$
 
 ### Seções
 
-[[Cadeias de Markov Reversíveis]]
-[[Processos de Decisão Markoviana]]
+[Cadeias de Markov Reversíveis](Cadeias%20de%20Markov%20Revers%C3%ADveis.md)
+[Processos de Decisão Markoviana](Processos%20de%20Decis%C3%A3o%20Markoviana.md)
 

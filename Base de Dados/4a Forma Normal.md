@@ -7,17 +7,17 @@ A relação R está na 4a Forma Normal se:
 
 ### Exemplos
 
-![[Pasted image 20220516090833.png]]
+![Pasted image 20220516090833](imgs/Pasted%20image%2020220516090833.png)
 
 ## Intuição
-![[Pasted image 20220516090901.png]]
+![Pasted image 20220516090901](imgs/Pasted%20image%2020220516090901.png)
 
 #### Normalizando a relação para a 4a FN:
 - Dada uma DMNT **A ->> B** na relação R, substitui-se **R** por:
 	- $A \subseteq B$ e
 	- R - B
 
-![[Pasted image 20220516091028.png]]
+![Pasted image 20220516091028](imgs/Pasted%20image%2020220516091028.png)
 
 - Evita redundância de tuplas ==> evita anomalias de inclusão/remoção/alteração
 - cenários típicos de normalização para 4a FN (ocorrências de DMNT)
@@ -31,7 +31,7 @@ A relação R está na 4a Forma Normal se:
 	- Atributos multivalorados definem novas relações
 		- Sem redundância e sem anomalias
 
-![[Pasted image 20220516091348.png]]
+![Pasted image 20220516091348](imgs/Pasted%20image%2020220516091348.png)
 
 ## Considerações Finais
 ### Normalização

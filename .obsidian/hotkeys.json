@@ -1,0 +1,29 @@
+{
+  "copy-as-html:copy-as-html-command": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ],
+  "obsidian-link-converter:convert-wikis-to-md-in-active-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ],
+  "obsidian-link-converter:convert-wikis-to-mdlink-under-folder": [],
+  "obsidian-link-converter:convert-wikis-to-md-in-vault": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
+  ]
+}

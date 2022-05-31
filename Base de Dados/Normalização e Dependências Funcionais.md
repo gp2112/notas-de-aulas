@@ -61,7 +61,7 @@
 - Uma relação **está em** um determinada **Forma Formal** quando satisfaz um conjunto de condições baseadas nas **dependências funcionais**
 - Colocando uma relação em uma forma normal...
 
-![[Pasted image 20220511104928.png]]
+![Pasted image 20220511104928](imgs/Pasted%20image%2020220511104928.png)
 ## Normalização
 
 - Formas Normais baseadas em dependências funcionais
@@ -100,13 +100,13 @@ Todos os atributos da relação **Atômicos** e **Monovalorados**
 - Exigida pela maioria dos SGBDRs
 
 #### Colocando uma relação na 1a FN:
-![[Pasted image 20220511110240.png]]
-![[Pasted image 20220511110250.png]]
+![Pasted image 20220511110240](imgs/Pasted%20image%2020220511110240.png)
+![Pasted image 20220511110250](imgs/Pasted%20image%2020220511110250.png)
 ### 2a Forma Normal
 - Relação na 1a Forma Normal
 - Todos os atributos <u>não primários</u> possuem **dependência total**, <u>transitiva ou não</u>, da **chave primária**
 
-![[Pasted image 20220511110431.png]]
+![Pasted image 20220511110431](imgs/Pasted%20image%2020220511110431.png)
 ### 3a Forma Normal
 - Relação entr 1a e 2a Formas Normais
 - Todos os atributos <u>não primários</u> possuem <u>dependência total</u>, **não transitiva**, da <u>chave primária</u>.
@@ -114,7 +114,7 @@ Todos os atributos da relação **Atômicos** e **Monovalorados**
 
 **Colocando uma relação na 3a FN**:
 
-![[Pasted image 20220511111457.png]]
+![Pasted image 20220511111457](imgs/Pasted%20image%2020220511111457.png)
 ### Forma Normal de Boyce - Codd (BCNF)
 - **BCNF** => Extensão da 3a FN genérica
 - uma relação R **está** na **bcnf** se:
@@ -126,10 +126,10 @@ Todos os atributos da relação **Atômicos** e **Monovalorados**
 - Exceção:
 	- quando **X->A** e X não é chave / A é atributo primário
 
-![[Pasted image 20220516083639.png]]
+![Pasted image 20220516083639](imgs/Pasted%20image%2020220516083639.png)
 A relação está **Treinamento** está na BCNF?
 
 Colocando em BCNF:
 
-![[Pasted image 20220516083927.png]]
-[[Dependência Multivalorada]]
+![Pasted image 20220516083927](imgs/Pasted%20image%2020220516083927.png)
+[Dependência Multivalorada](Depend%C3%AAncia%20Multivalorada.md)

@@ -19,17 +19,17 @@ Então é **Dependência Multivalorada Trivial**
 Senão ==> **Dependência Multivalorada Não-Trivial**
 
 ### Exemplos:
-![[Pasted image 20220516090317.png]]
+![Pasted image 20220516090317](imgs/Pasted%20image%2020220516090317.png)
 
 ### Exemplo
-![[Pasted image 20220516090354.png]]
+![Pasted image 20220516090354](imgs/Pasted%20image%2020220516090354.png)
 
-![[Pasted image 20220516090440.png]]
+![Pasted image 20220516090440](imgs/Pasted%20image%2020220516090440.png)
 
 ### Problema da DM Não-Trivial
 - requer **redundância** nas tuplas
 - Exemplo:
 	- Empregado = {<u>Nome,Projeto,Dependente</u>}
 	- Está na BCNF, mas ainda há redundância de dados
-- Solução ==> [[4a Forma Normal]]!
+- Solução ==> [4a Forma Normal](4a%20Forma%20Normal.md)!
 

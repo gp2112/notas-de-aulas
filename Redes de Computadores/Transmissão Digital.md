@@ -2,7 +2,7 @@
 
 ---
 ## Dados Digitais
-![[Pasted image 20220428142925.png]]
+![Pasted image 20220428142925](imgs/Pasted%20image%2020220428142925.png)
 
 #### **Fatores Relevantes na transmissão de sinais digitais:**
 - Componente contínua
@@ -73,7 +73,7 @@ Mais do que dois níveis para a codificação dos dados.
 		- Transição baixo para alto representa 1
 	- Usada pelo IEEE 302.3 (Internet)
 
-![[Pasted image 20220428150537.png]]
+![Pasted image 20220428150537](imgs/Pasted%20image%2020220428150537.png)
 
 **Problema** -> exige largura de banda duas vezes maior que o NRZ
 
@@ -101,13 +101,13 @@ Mais do que dois níveis para a codificação dos dados.
 	- Taxa de modulação máxima é duas vezes a do **NRZ**.
 	- Requer maior largura de banda.
 
-![[Pasted image 20220428151240.png]]
+![Pasted image 20220428151240](imgs/Pasted%20image%2020220428151240.png)
 
 #### Exercícios:
 
-![[Pasted image 20220428151311.png]]
+![Pasted image 20220428151311](imgs/Pasted%20image%2020220428151311.png)
 
-![[Pasted image 20220428151341.png]]
+![Pasted image 20220428151341](imgs/Pasted%20image%2020220428151341.png)
 
 #### Multiline Transmission Three Level (MLT-3)
 
@@ -140,25 +140,25 @@ Basta substituir blocos de n bits por blocos de x bits.
 - Com a substituição de blocos de bits, ficarão blocos não alocados que podem ser alocados para controle de transmissão
 
 
-![[Pasted image 20220428153017.png]]
-![[Pasted image 20220428153032.png]]
+![Pasted image 20220428153017](imgs/Pasted%20image%2020220428153017.png)
+![Pasted image 20220428153032](imgs/Pasted%20image%2020220428153032.png)
 - Na prática as duas estratégias são utilizadas conjuntamente
 
-![[Pasted image 20220428153059.png]]
+![Pasted image 20220428153059](imgs/Pasted%20image%2020220428153059.png)
 
 #### Exercício
-![[Pasted image 20220428153128.png]]
+![Pasted image 20220428153128](imgs/Pasted%20image%2020220428153128.png)
 
 ---
 ## Dados Analógicos
-![[Pasted image 20220428154614.png]]
+![Pasted image 20220428154614](imgs/Pasted%20image%2020220428154614.png)
 
 ### PCM - Pulse-Code Modulation
 
 É um método usado para converter sinais analógicos em digitais por meio de três etapas -> amostragem, quantização e codificação.
 
 #### DIagrama de Blocos do PCM
-![[Pasted image 20220428154037.png]]
+![Pasted image 20220428154037](imgs/Pasted%20image%2020220428154037.png)
 #### Teorema da Amostragem (Teorema de Nyquist)
 Toda informação de um sinal analógico pode ser recuperada se uma amostragem for reaizada a uma taxa de duas vezes a maior frequência do sinal. O sinal analógico pode ser reconstruído a partir dessas amosras utilizando-se um filtro passa-baixa.
 
@@ -214,4 +214,4 @@ sinal digital.
 c ́odigos bin ́arios podem recuperar o sinal digital a partir do  
 sinal combinado.
 
-[[Camada de Enlace de Dados]]
+[Camada de Enlace de Dados](Camada%20de%20Enlace%20de%20Dados.md)

@@ -5,14 +5,14 @@
 	1) Agregação é identificada por **atributo próprio + chave(s) de CE(s)** que participa(m) do CR gerador, **E**
 	2) Uma mesma instância do CR gerador resulta em mais de uma entidade agregada 
 
-	![[Pasted image 20220427104505.png]]
+	![Pasted image 20220427104505](imgs/Pasted%20image%2020220427104505.png)
 
-![[Pasted image 20220427104528.png]]
+![Pasted image 20220427104528](imgs/Pasted%20image%2020220427104528.png)
 
 - **Exemplo**
 		- Paciente possui um **único** convêncio e são armazenadas as ocorrências de utilização
-		![[Pasted image 20220427104705.png]]
-		 ![[Pasted image 20220427104736.png]]
-	![[Pasted image 20220427104752.png]]
+		![Pasted image 20220427104705](imgs/Pasted%20image%2020220427104705.png)
+		 ![Pasted image 20220427104736](imgs/Pasted%20image%2020220427104736.png)
+	![Pasted image 20220427104752](imgs/Pasted%20image%2020220427104752.png)
 
 - **Caso 2** -->  

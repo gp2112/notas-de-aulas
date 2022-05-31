@@ -1,4 +1,4 @@
-![[Pasted image 20220516081934.png]]
+![Pasted image 20220516081934](imgs/Pasted%20image%2020220516081934.png)
 **1FN ->** OK - atributos atomicos e monovalorados
 
 

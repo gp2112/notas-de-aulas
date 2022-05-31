@@ -9,7 +9,7 @@ Determinar "bons" caminhos (sequência de roteadores) através da rede da fonte 
 	- Caminhos de menor *custo*
 	- Caminhos redundantes
 
-![[Pasted image 20220524170349.png]]
+![Pasted image 20220524170349](imgs/Pasted%20image%2020220524170349.png)
 
 ## Classificação de Algoritmos de Roteamento
 
@@ -68,7 +68,7 @@ Determinar "bons" caminhos (sequência de roteadores) através da rede da fonte 
 	- Coluna para cada roteador vizinho
 
 #### Problema da contagem até infinito
-![[Pasted image 20220524173619.png]]
+![Pasted image 20220524173619](imgs/Pasted%20image%2020220524173619.png)
 - Aumento do custo ou falhas são propagadas muito lentamente
 - Os valores para $y$ eram até de 4 até $x$ e de 1 até $z$ eram de 1 até y e de 5 até x/
 - O nó $y$ detecta a mudança e atualiza o valor até x no seu vetor comparando 60 com o caminho passando por z
@@ -104,7 +104,7 @@ Determinar "bons" caminhos (sequência de roteadores) através da rede da fonte 
 - realizam roteamento inter-AS entre si
 - realizam roteamento intra-AS com os outros roteadores do mesmo AS
 
-![[Pasted image 20220524174329.png]]
+![Pasted image 20220524174329](imgs/Pasted%20image%2020220524174329.png)
 **Exemplo:**  envio de mensagem do *host* h1 ao *host* h2
 
-![[Pasted image 20220526143231.png]]
+![Pasted image 20220526143231](imgs/Pasted%20image%2020220526143231.png)

@@ -21,7 +21,7 @@ Descrito na RFC 1661 e mais elaborado na RFC 1662
 - Um protocolo para negociar opções da camada de rede, permitindo o uso de vários protocolos de redes: **NCP (Network Control Protocol)**
 
 #### Quadro PPP
-![[Pasted image 20220517172912.png]]
+![Pasted image 20220517172912](imgs/Pasted%20image%2020220517172912.png)
 **Delimitação:** *flag* **01111110**
 **Endereçco**: Contém valor fixo **1111111**
 **Controle:** Contém o valor padrão **00000011**
@@ -78,4 +78,4 @@ Baseado em 5 premissas:
 - *Broadcast* (fio ou meio compartilhado, ex: Ethernet)
 - *Switched* (Ex: switched Ethernet, ATM, etc)
 
-[[Ethernet]]
+[Ethernet](Ethernet.md)

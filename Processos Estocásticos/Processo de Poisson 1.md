@@ -54,7 +54,7 @@ $E(X) = \int_0^\infty x \lambda e^{-\lambda x} dx = \frac{1}{\lambda}$
 
 $Var(X) = \int_0^\infty (\frac{x-1}{\lambda})^2 \lambda e^{-\lambda x} dx = \frac{1}{\lambda^2} = \frac{E(X)}{\lambda}$
 
-![[Pasted image 20220519114123.png]]
+![Pasted image 20220519114123](imgs/Pasted%20image%2020220519114123.png)
 
 ### Falta de Memória
 

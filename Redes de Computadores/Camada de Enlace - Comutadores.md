@@ -9,13 +9,13 @@ O comutador em si é transparente aos hospedeiros e roteadores na sub-rede (eles
 
 Filtragem e repasse por comutadores são feitos com uma tabela de comutação:
 
-![[Pasted image 20220519155424.png]]
+![Pasted image 20220519155424](imgs/Pasted%20image%2020220519155424.png)
 
 Comutadores são **autodidatas**.
 
 O comutador aprende a localização do adaptador com endereço `01-12-23-34-45-56` ao receber um quadro com esse endereço na origem a partir de uma de suas interfaces.
 
-![[Pasted image 20220519155533.png]]
+![Pasted image 20220519155533](imgs/Pasted%20image%2020220519155533.png)
 
 O horário é marcado pois se passar um período de tempo (tempo de envelhecimento) sem receber novos quadros de um dispositivo, o seu endereço MAC é apagado da tabela.
 

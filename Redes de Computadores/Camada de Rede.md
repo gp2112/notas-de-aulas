@@ -3,7 +3,7 @@
 A Camada de Rede tem a função de transportar pacotes entre os sistemas finais da rede.
 Ela deve ter uma entidade em cada sistema final ou roteador da rede.
 
-![[Pasted image 20220524163056.png]]
+![Pasted image 20220524163056](imgs/Pasted%20image%2020220524163056.png)
 ### **Três Funções Importantes**:
 - **Determinação de Caminhos:** rota escolhida pelos pacotes entre a origem e o destino (algoritmo de roteamento)
 - **Comutação:** mover pacotes entre as portas de entrada e de saída dos roteadores
@@ -35,7 +35,7 @@ Existem dois tipos de serviços para entregar pacotes aos seus destinos.
 - É usado para estabelecer, manter e encerrar Circuitos Virtuais.
 - Usados em ATM, *Frame Relay*, X-25, mas não na Internet.
 
-![[Pasted image 20220524164612.png]]
+![Pasted image 20220524164612](imgs/Pasted%20image%2020220524164612.png)
 - Ótimo para conversação humana
 	- tempos restritos, exigências de confiabilidade
 	- Necessário para serviço garantino
@@ -49,7 +49,7 @@ Existem dois tipos de serviços para entregar pacotes aos seus destinos.
 - Pacotes tipicamente trasnsportam o endereço de destino
 	- Pacotes para o mesmo destino podem seguir diferentes rotas.
 - Usado na internet!
-![[Pasted image 20220524165355.png]]
+![Pasted image 20220524165355](imgs/Pasted%20image%2020220524165355.png)
 - Dados trocados entre computadores.
 - Sistemas finais inteligentes
 	- podem se adaptar, realizar controle e recuperação de erros.

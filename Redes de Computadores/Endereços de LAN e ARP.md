@@ -13,7 +13,7 @@ Usado para levar o pacote de uma interface física a outra fisicamente conectada
 - Endereços MAC com 48 bits (na maioria das LANs)
 - Gravado na memória somente de leitura (ROM) do adaptador de rede
 
-![[Pasted image 20220519145608.png]]
+![Pasted image 20220519145608](imgs/Pasted%20image%2020220519145608.png)
 - A alocação dos endereços MAC é administrada pelo IEEE.
 - O fabricante compra porções do espaço de endereçco MAC (para assegurar a unicidade);
 - Endereçamento MAC tem portabilidade:
@@ -37,7 +37,7 @@ Usando o protocolo ARP (*Address Resolution Protocol*)!
 
 ### Roteamento para outra LAN
 
-![[Pasted image 20220519152617.png]]
+![Pasted image 20220519152617](imgs/Pasted%20image%2020220519152617.png)
 - **Caminho**: roteamento de *A* para *D* via *R*
 - Na tabela de roteamento do *host* origem, os pacotes destinados a *D* devem ser enviados ao IP `111.111.111.110`
 - Na tabela ARP do *host* origem, com o IP especificado, os quadros devem ser destinados ao endereço MAC `E6-E9-00-17-BB-4B`

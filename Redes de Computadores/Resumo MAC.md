@@ -13,4 +13,4 @@
 - Eliminam colisões e intervalos vazios, resultando em maior eficiência
 - Maior latência e pontos de falha
 
-[[Endereços de LAN e ARP]]
+[Endereços de LAN e ARP](Endere%C3%A7os%20de%20LAN%20e%20ARP.md)

@@ -6,7 +6,7 @@ Guilherme Paixão - 05/05/2022
 
 ---
 
-![[Pasted image 20220505154850.png]]
+![Pasted image 20220505154850](imgs/Pasted%20image%2020220505154850.png)
 
 
 ## Arquitetura IEEE 802
@@ -30,13 +30,13 @@ Define somente padrões para os equivalentes níveis físicos e de enlace do *RM
 	- IEEE 802.4: Rede em Barramento
 	- IEEE 802.5: Rede em Anel (*Token Ring*)
 
-![[Pasted image 20220505143255.png]]
+![Pasted image 20220505143255](imgs/Pasted%20image%2020220505143255.png)
 
 A **Camada Física** executa um papel-chave na comunicação entre computadores, mas os seus esforços, sozinhos, <u>não são suficientes</u>. 
 Cada uma das suas funções tem suas limitações, que a **Camada de Enlace** trata.
 
-![[Pasted image 20220505143502.png]]
-![[Pasted image 20220505143513.png]]
+![Pasted image 20220505143502](imgs/Pasted%20image%2020220505143502.png)
+![Pasted image 20220505143513](imgs/Pasted%20image%2020220505143513.png)
 Os padrões **IEEE** são os padrões LAN predominantes e mais conhecidos. Envolvem apenas as camadas mais inferiores: física e enlace.
 
 **IEEE 802.3 ->** Especifica a camada física e a parte do acesso por canal da camada de enlace (<u>padrão Ethernet oficial</u>)
@@ -65,7 +65,7 @@ A subcamada **Media Access Control (MAX)** trata dos protocolos que um host segu
 - Esconde as diferenças entre os diversos protocolos pelos padrões 802.
 - Oferece um único formato e interface para a camada de rede.
 
-![[Pasted image 20220505150231.png]]
+![Pasted image 20220505150231](imgs/Pasted%20image%2020220505150231.png)
 Provê três tipos de serviços:
 - Datagrama não confiável
 - Datagrama confirmado
@@ -84,7 +84,7 @@ Provê três tipos de serviços:
 - As vezes são chamados de *burned-in address (BIAs)* porque eles são gravados na ROM e são copiados para a RAM quando a placa de rede é inicializada.
 - No linux, execute o comando *ifconfig -a* para ver o endereçco MAC da placa do seu computador. Ex: 88:b1:11:c0:5a:08
 
-![[Pasted image 20220505152748.png]]
+![Pasted image 20220505152748](imgs/Pasted%20image%2020220505152748.png)
 
 Antes de sair da fábrica, o fabricante do hardware atribui um endereçco físico a cada placa de rede. Esse endereçco é programado em um chip na placa de rede. Como o MAC está localizado na placa de rede, se a placa de rede for trocada, o endereçco físico da estação mudará para o novo endereço MAC.
 
@@ -96,7 +96,7 @@ Uma parte importante do **encapsulamento** e do **desencapsulamento** é a adiç
 
 **Desvantagem:** endereçcos MAC não têm estrutura e são considerados espaços de endereços contínuos.
 
-![[Pasted image 20220505153457.png]]
+![Pasted image 20220505153457](imgs/Pasted%20image%2020220505153457.png)
 
 ### Enquadramento
 Ajuda a obter as informações essenciais que não poderiam, de outra forma, ser obtidas apenas com fluxos de bit codificados.
@@ -107,7 +107,7 @@ Exemplos dessas informações são:
 - um registro dos erros que ocorreram durante a comunicação.
 - de quem é a vez de "falar" em uma "conversa" entre computadores.
 
-![[Pasted image 20220505153734.png]]
+![Pasted image 20220505153734](imgs/Pasted%20image%2020220505153734.png)
 
 ### Media Access Control (MAC)
 O Media Access Control (MAC) se refere a protocolos que determinam que computador, em um ambiente de meios compartilhados (domínio de colisão) tem permissão para transmetir dados.
@@ -134,25 +134,25 @@ Hoje, o termo Ethernet é frequentemente usado para se referir a todas as LANs b
 
 A Ethernet fornece serviços correspondentes às camadas 1 e 2, enquanto a IEEE 802.3 especifica a camada física, a camada 1 e a parte de acesso a canais da camada de enlace, a camada 2, mas não define um protocolo de controle de enlace lógico.
 
-![[Pasted image 20220505154805.png]]
-![[Pasted image 20220505154814.png]]
+![Pasted image 20220505154805](imgs/Pasted%20image%2020220505154805.png)
+![Pasted image 20220505154814](imgs/Pasted%20image%2020220505154814.png)
 
 
 **Funcão da Camada de Enlace de Dados** -> Transferir dados da camada de rede da máquina de **origem** para a camada de rede da máquina **destino**.
 
-![[Pasted image 20220510143017.png]]
+![Pasted image 20220510143017](imgs/Pasted%20image%2020220510143017.png)
 - Lida com quadros -> grupos de bits transmitidos pela rede
 - Depede da camada Física para enviar/receber bits
 
 - **Controle de Enlace Lógico (LLC)** -> Fornece mecanismos de multiplexação e controle de fluxo.
 - **Controle de Acesso ao Meio (MAC)** -> Provê acesso a um canal de comunicação e o endereçamento neste canal.
 
-![[Pasted image 20220510143240.png]]
+![Pasted image 20220510143240](imgs/Pasted%20image%2020220510143240.png)
 - Dois elementos físicos **fisicamente conectados**:
 	- Host-Roteador, roteador-roteador, host-host
 - Unidade de dados: quadro(*frame*)
 
-![[Pasted image 20220510143333.png]]
+![Pasted image 20220510143333](imgs/Pasted%20image%2020220510143333.png)
 
 ### Serviços
 
@@ -178,7 +178,7 @@ A maioria dos protocolos de enlace possuem os seguintes elementos:
 - **Cabeçalho** -> possui informações de controle para que haja a comunicação horizontal entre as camadas de enlace da origem e destino. É formado por diversos campos, cada um com uma função específica no protocolo.
 - **Dados** -> Encapsula o PDU de rede passando pela camada de rede.
 - **Código de Detecção de Erro (CDE)** -> tem a função de controlar erros na camada de enlace.
-![[Pasted image 20220510144052.png]]
+![Pasted image 20220510144052](imgs/Pasted%20image%2020220510144052.png)
 
 ### Tipos de Serviços
 
@@ -233,7 +233,7 @@ Usa um campo no cabeçalho para indicar o número de caracteres no quadro.
 
 Assim, **não é** usado na prática para protocolos da camada de enlace.
 
-![[Pasted image 20220510152747.png]]
+![Pasted image 20220510152747](imgs/Pasted%20image%2020220510152747.png)
 
 #### Caracteres de Início e de Fim
 Reconhecimento do início e do fim de um quadro através dos caracteres ASCII:
@@ -247,7 +247,7 @@ Reconhecimento do início e do fim de um quadro através dos caracteres ASCII:
 
 Técnica presa ao código ASCII e a caracteres de 8bits.
 
-![[Pasted image 20220510153208.png]]
+![Pasted image 20220510153208](imgs/Pasted%20image%2020220510153208.png)
 
 #### Flags de início e de fim
 Permite codificar caracteres com um número arbitrário de bits por caractere, usando um padrão especial de bits (*flag*) para sinalizar início e fim do quadro
@@ -256,7 +256,7 @@ Permite codificar caracteres com um número arbitrário de bits por caractere, u
 
 - Quando o receptor encontra cinco "ums" seguidos por um zero, o *stuff* é retirado
 
-![[Pasted image 20220510153430.png]]
+![Pasted image 20220510153430](imgs/Pasted%20image%2020220510153430.png)
 
 #### Violação de Código
 - Baseado em características da camada física (por isso violação)
@@ -264,7 +264,7 @@ Permite codificar caracteres com um número arbitrário de bits por caractere, u
 - Por serem sinais reservados, não é necessário inserir bytes ou bits de dados
 - São fáceis de serem identificados
 
-![[Pasted image 20220510154859.png]]
+![Pasted image 20220510154859](imgs/Pasted%20image%2020220510154859.png)
 
 Bits a serem transmitidos -> 01000111111000110001000001111110
 
@@ -292,7 +292,7 @@ Como ter certeza que todos os quadros transmitidos foram entregues à camada de 
 
 - Antes de enviar uma mensagem o transmissor utiliza uma função para gerar um Código de Detecção de Erro (CDE) a partir da mensagem a ser enviada, de forma a gerar uma espécie de dígito verificador. Esse código é adicionado ao quadro que será enviado.
 
-![[Pasted image 20220512143502.png]]
+![Pasted image 20220512143502](imgs/Pasted%20image%2020220512143502.png)
 #### Bit de Paridade Simples
 - Insere-se 1 bit extra ao final de cada caractere de modo a deixar todos os caracteres com um número **par** ou **ímpar** de bits 1
 - Se ocorrerem um número par de erros eles não serão detectados
@@ -302,7 +302,7 @@ Como ter certeza que todos os quadros transmitidos foram entregues à camada de 
 - Os bits são divididos em i linhas e j colunas
 - Para cada linha e coluna é calculado um bit de paridade
 
-![[Pasted image 20220512150506.png]]
+![Pasted image 20220512150506](imgs/Pasted%20image%2020220512150506.png)
 - Possível fazer correção no caso de um erro, mas não em dois erros em linhas ou colunas consecutivas
 
 #### Checksum
@@ -319,25 +319,25 @@ Como ter certeza que todos os quadros transmitidos foram entregues à camada de 
 	- Forma o checksum com o complemento da soma
 	- Envia a mensagem junto como checksum
 	
-![[Pasted image 20220512150902.png]]
+![Pasted image 20220512150902](imgs/Pasted%20image%2020220512150902.png)
 - **Receptor**:
 	- Divide a mensagem em *k* seguimentos de *n* bits
 	- Soma os *k* seguimentos
 	- Forma o *Checksum* com o complemento da soma
 	- Se o *checksum* for igual a zro, dados aceitos!
 
-![[Pasted image 20220512151010.png]]
+![Pasted image 20220512151010](imgs/Pasted%20image%2020220512151010.png)
 
 #### Verificação de Redundância Cíclica (CRC)
 *Cyclic Redundancy Check*, também conhecido como código polinomial
 
 - Técnica mais utilizada
 - Detecta erros num segmento transmitido.
-![[Pasted image 20220512151126.png]]
+![Pasted image 20220512151126](imgs/Pasted%20image%2020220512151126.png)
 - Emissor/Receptor concordam com uma sequência de bits que representa o gerador ***G*** com $(r+1)$ bits de comprimento e que tem o bit mais significativo (mais a esquerda) como 1
 - **Ideia**: sequência de bits a ser transmitida D com d bits com a soma de verificação deve ser divisível pelo gerador
 - Receptor tenta dividir pelo gerador. Se houver resto, houve um erro de transmissão
-![[Pasted image 20220512151542.png]]
+![Pasted image 20220512151542](imgs/Pasted%20image%2020220512151542.png)
 
 - O gerador usado no padrão IEEE 802 é: <span style="color:red">100000100110000010001110110110111</span>
 - Para se calcular R, realiza-se o processo de divisão longa ao se subtrair o gerador, caso o bit mais significativo em questão seja 1 ou, caso contrário, o seu múltiplo por 0.
@@ -367,17 +367,17 @@ Como ter certeza que todos os quadros transmitidos foram entregues à camada de 
 	- O bit de paridade 1 cobre todas as posições cuja representação binária incluem 1 no bit menos significativo (1, 3, 5, 7...)
 	- O bit de paridade 2 cobre todas as poições cuja representação binária incluem 1 no segundo bit menos significativo (2, 3, 6, 7....)
 
-![[Pasted image 20220512154352.png]]
+![Pasted image 20220512154352](imgs/Pasted%20image%2020220512154352.png)
 
 Se quisermos enviar os bits $1011001$ , eles devem ser dispostos da seguinte maneira:
-![[Pasted image 20220512154430.png]]
+![Pasted image 20220512154430](imgs/Pasted%20image%2020220512154430.png)
 Usando paridade par, o primeiro bit de paridade é o $0$.
-![[Pasted image 20220512154501.png]]
+![Pasted image 20220512154501](imgs/Pasted%20image%2020220512154501.png)
 Usando paridade par, o segundo bit de paridade é 1
 
-![[Pasted image 20220512154524.png]]
-[[Acesso ao Enlace]]
-[[Protocolos de Acesso Múltiplo]]
+![Pasted image 20220512154524](imgs/Pasted%20image%2020220512154524.png)
+[Acesso ao Enlace](Acesso%20ao%20Enlace.md)
+[Protocolos de Acesso Múltiplo](Protocolos%20de%20Acesso%20M%C3%BAltiplo.md)
 
-[[Controle de Enlace Ponto-a-Ponto]]
-[[Camada de Enlace - Comutadores]]
+[Controle de Enlace Ponto-a-Ponto](Controle%20de%20Enlace%20Ponto-a-Ponto.md)
+[Camada de Enlace - Comutadores](Camada%20de%20Enlace%20-%20Comutadores.md)

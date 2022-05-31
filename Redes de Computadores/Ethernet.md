@@ -13,7 +13,7 @@ O **Preâmbulo** é um padrão de uns e zeros alternados usado para sincronizaç
 
 As versões mais rápidas da Ethernet são síncronas e essa informação de temporização é mantida para fins de compatibilidade.
 
-![[Pasted image 20220519144255.png]]
+![Pasted image 20220519144255](imgs/Pasted%20image%2020220519144255.png)
 
 - O campo **Endereço de Destino** contém um endereço de destino MAC.
 - O campo **Endereço de Origem** contém um endereço de origem MAC

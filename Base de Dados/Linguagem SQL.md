@@ -32,7 +32,7 @@ Exemplos em SQL:
 - ex: SQL
 
 ## Componentes de um SGBD
-![[Pasted image 20220525102521.png]]
+![Pasted image 20220525102521](imgs/Pasted%20image%2020220525102521.png)
 
 Os componentes funcionais do SGBD:
 - componentes de processamento de consultas
@@ -123,7 +123,7 @@ CREATE TABLE tabela {
 
 **Exemplo:** Criar tabelas para o seguinte esquema:
 
-![[Pasted image 20220525114047.png]]
+![Pasted image 20220525114047](imgs/Pasted%20image%2020220525114047.png)
 
 ```postgresql
 CREATE TABLE aluno (
@@ -173,3 +173,58 @@ CREATE TABLE turma (
 );
 
 ```
+
+**ALTER TABLE -** Incluir/alterar/remover definições de colunas e restrições
+```sql
+ALTER TABLE tabela <ação>;
+```
+**Ação:**
+- ADD *novoAtrib* tipo *restrições_de_coluna*
+- ADD [CONSTRAINT *nome*] restrição_de_tabela
+- DROP *atributo* [CASCADE | RESTRICT]
+- DROP CONSTRAINT *nome*
+- ALTER atributo DROP DEFAULT
+- ALTER atributo SET DEFAULT *valor*
+
+**DROP** *atributo* [CASCADE | RESTRICT]
+- CASCADE - todas as visões e restrições (*constraints*) que referenciam o atributo são removidas automaticamente
+- RESTRICT - atributo só é removido se não houver nenhuma visão ou restrição que o referencie.
+
+**DROP TABLE -** exclui uma tabela de dados
+```sql
+DROP TABLE tabela CASCADE|RESTRICT;
+```
+
+## Comandos DML
+
+**INSERT -** Insere uma ou mais tuplas em uma tabela.
+
+```sql 
+INSERT INTO tabela [(atrib1, atrib2, ...)] VALUES (valor1, valor2, ...);
+```
+
+**UPDATE -** modifica o valor de um atributo em uma ou mais tuplas da tabela.
+
+```sql
+UPDATE tabela SET
+	atributo1 = <valor/expressão>,
+	atributo2 = <valor/expressão>,
+	...
+WHERE <condicao/localizacao>;
+```
+
+**DELETE -** remove uma ou mais tuplas da tabela
+
+```sql
+DELETE FROM tabela WHERE <condicao/localizacao>;
+```
+
+### SELECT 
+```sql
+SELECT [DISCTINCT|ALL] <lista de atributos> FROM <lista de tabelas>
+[WHERE <condicoes>]
+[GROUP BY atributo]
+	[HAVING <condicoes>]
+[ORDER BY atributo [ASC|DESC]]
+```
+
