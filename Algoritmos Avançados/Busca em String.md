@@ -98,10 +98,7 @@ Apesar de mais fácil de modelar e desse algoritmo ser ótimo, sua implementaç�
 
 Para cada chamada da função *solve*, ela vai se chamar, novamente, 3 vezes. Isso gera uma árvore com, praticamente, 3 nós em cada nível.
 
-
-![]("imgs/Pasted image 20220527154913.png")
-
-![dd]("imgs/Pasted image 20220527154913.png")
+![tree](imgs/tree.png)
 
 A altura H da árvore será sempre em função do tamanho das duas strings, n e m, sendo que seu limite superior será a combinação linear de m e n.
 
