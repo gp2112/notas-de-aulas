@@ -1,4 +1,4 @@
-# Busca em String
+# Edit Distance
 
 Por Guilherme Paixão
 
@@ -110,7 +110,7 @@ O número de nós $T_{max}$ máximo dessa árvore, como ela possui até 3 filhos
 
 E sendo o número de Nós da nossa árvore, ou seja, o número de chamadas da função $S(i,j)$, representado por $N$:
 
-$N \leq T_{max} \longrightarrow N \leq 3^{H(m,n)}$ 
+$N \leq T_{max} \therefore N \leq 3^{H(m,n)}$ 
 
 Como $H(m,n) \in O(m+n)$
 
@@ -175,9 +175,9 @@ Como podemos ver, sempre que o estado $i,j$ já tiver sido computado, reaproveit
 
 ### Tabulation
 
-A otimização com *Memoization* já foi muito boa: reduziu um algoritmo que errra exponencial em polinomial!
+A otimização com *Memoization* já foi muito boa: reduziu um algoritmo que era exponencial em polinomial!
 
-Mas ainda dá para melhorar, dependendo da situação. Como dá para perceber, o *Memoization* ainda realiza chamadas recursivas, que consomem memória. Então, além de gastar com memória extra para armazenar os resultados, ainda gasta mais com cada chamada da função.
+Mas ainda dá para melhorar, dependendo da situação. Como dá para perceber, o *Memoization* ainda realiza chamadas recursivas, que consomem memória e possuem um custo de chamada. Então, além de gastar com memória extra para armazenar os resultados, ainda gasta mais com cada chamada da função.
 
 Com o método do *Tabulation*, é possível fazer o mesmo algoritmo de forma iterativa, realizando assim appenas uma chamada de função.
 
@@ -204,16 +204,26 @@ int solve() {
     for (i=0; i<N; i++)
         for (j=0; j<M; j++) 
             TAB[i+1][j+1] = min(
-                                alpha(i+1,j+1)+TAB[i][j],
-                                delta+TAB[i][j+1],
+                                alpha(i+1,j+1) + TAB[i][j],
+                                delta + TAB[i][j+1],
                                 delta + TAB[i+1][j]
                             );
     return TAB[M][N];
 
 }
-
-Podemos ver que, para cada umma de N operações, o programa fará mais M.
-
-Ou seja, podemos concluir que sua complexidade, no pior cenário, será O(NM), MUITO menor que o exponencial anterior!
-
 ```
+
+Podemos ver que, para cada uma de N operações, o programa fará mais M.
+
+Ou seja, podemos concluir que sua complexidade de tempo, no pior cenário, será $O(m\cdot n)$ - MUITO menor que o exponencial anterior!
+
+## Custo
+Como bem sabemos, usar programação dinâmica é muito bom quando se trata de otimizar o tempo de processamento.
+Porém, quando se trata de memória, essa técnica possui um custo considerável.
+Na implementação acima, aloquei memória de forma estática, na *stack*, para facilitar. Mas se alocarmos dinamicamente a memória, a fim de otimizar, na *heap* - utilizando alguma estrutura de dados tipo um *vetor* - o uso de memória extra, no pior cenário, será $O(M\cdot N)$.
+Se usarmos *Memoization*, pior ainda, pois ainda utilizamos recursão!
+
+Por isso, em sistemas mais limitados quando se trata de memória (embarcados, por exemplo), a PD deve ser utilizada com bastante cuidado!
+
+### Créditos:
+Material baseado nas aulas de Algoritmos Avançados professor [João Batista](https://sites.icmc.usp.br/jbatista/).
