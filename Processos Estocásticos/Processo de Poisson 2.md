@@ -1,5 +1,8 @@
 # Processo de Poisson #2
 
+- [Processo de Contagem](#Processo de Contagem)
+- [Tempo da Primeira Ocorrência](#Tempo da Primeira Ocorrência)
+
 ### Processo de Contagem
 
 Um processo estocástico $\{N(t), t\geq 0\}$  é um processo de contagem se $N(t)$ representa o total de ocorrências de um evento até o tempo $t$.
@@ -132,3 +135,25 @@ $$P(N(a_1)=k_1,...,N(a_m)=k_m|N(b)=n) = \frac{n!}{k_1!k_2!...k_m!}\times (\frac{
 
 ou seja: $N(a_1)=k_1,...,N(a_m)=k_m|N(b) = n \sim Multinomial (n, \frac{a_1}{b}, ..., \frac{a_m}{b})$
 
+## Tempos da Primeira Ocorrência
+Seja $\{N(t), t\geq 0\}$ um processo de Poisson com taxa $\lambda$ .
+- Denota-se por $T_1$ o tempo até a primeira ocorrência.
+$$P(T_1>t)=P(N(t)=0)=e^{-\lambda t}$$
+$$F_{T_1}(t)=P(T_1\leq t)=1-e^{-\lambda t}$$
+$T_1$ é uma variável aleatória com distribuição Exponencial($\lambda$).
+
+## Tempos entre Ocorrências
+Seja $\{N(t), t\geq 0\}$ um processo de Poisson com taxa $\lambda$.
+- Denota-se por T_n o tempo entre a $(n-1)$ e *n*-ésima ocorrência de eventos, sendo $T_1$ o tempo até a primeira ocorrência.
+- A sequência $\{T_n,n=1,2,...\}$ é chamada de **sequência de tempos entre ocorrências ou entre chegadas**.
+$$P(T_n>t)=P(N(T_{n-1}+t)-N(T_{n-1})=0)=e^{-\lambda t}$$
+Assim, $T_1, T_2,...,T_n$ são variáveis aleatórias independentes com distribuição Exponencial($\lambda$).
+
+## Distribuição Condicional dos Tempos de Chegada
+
+Seja $\{N(t), t \geq 0\}$ com taxa $\lambda$:
+- Sabe-se que extamente 1 evento ocorreu no intervalo (0,t]
+- Qual a distribuição do tempo até a ocorrência do evento?
+- Equivalentemente, deseja-se obter $$P(T_1<s|N(t)=1)=\frac{s}{t},s\leq t$$
+Pela hipótese de incrementos independentes e estacionários é razoável assumir que a distribuição é uniforme em (0,t]. 
+Pode-se verificar que $$P(T_1<s|N(t)=1)=\frac{s}{t}, s\leq t$$
