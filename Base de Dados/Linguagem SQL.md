@@ -228,3 +228,126 @@ SELECT [DISCTINCT|ALL] <lista de atributos> FROM <lista de tabelas>
 [ORDER BY atributo [ASC|DESC]]
 ```
 
+### Junção Interna (*inner join*)
+- Combina tuplas relacionadas de diferentes relações em uma única tupla.
+- Permite processamento de relacionamentos entre relações
+- Muito usada com relações vinculadas por chave estrangeira
+![](Pasted%20image%2020220606081955.png)
+
+### Junção Externa (*outer join*)
+
+#### Left Outer Join
+- Tuplas atendem à condição de junção
+- + Tuplas da tabela à esquerda que não têm correspondentes na tabela à direita
+![](Pasted%20image%2020220606082218.png)
+
+#### Right Outer Join
+- tuplas que atendem à condição de junção
+- + tuplas à tabela à direita que não têm correspondentes na tabela à esquerda
+
+![](Pasted%20image%2020220606082232.png)
+
+#### Full Outer Join
+- Tuplas que atemdem à condição de junção
+- Tuplas da tabela à esquerda que não têm correspondentes na tabela à direita
+- Tuplas da tabela à direita que não têm correspondentes na esquerda
+![](Pasted%20image%2020220606082332.png)
+---
+**Exemplo:**
+Suponhamos as tabelas:
+
+**ALUNO**
+```
+ Column |         Type          | Collation | Nullable | Default 
+--------+-----------------------+-----------+----------+---------
+ nome   | character varying(50) |           |          | 
+ turma  | character(2)          |           |          | 
+ id     | integer               |           | not null | 
+Indexes:
+    "aluno_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "const_turma" FOREIGN KEY (turma) REFERENCES turma(cod)
+```
+**TURMA**
+```
+                  Table "public.turma"
+ Column  |     Type     | Collation | Nullable | Default 
+---------+--------------+-----------+----------+---------
+ cod     | character(2) |           | not null | 
+ prof_id | integer      |           |          | 
+ turno   | character(5) |           |          | 
+Indexes:
+    "turma_pkey" PRIMARY KEY, btree (cod)
+Check constraints:
+    "turma_turno_check" CHECK (upper(turno::text) = ANY (ARRAY['MANHA'::text, 'TARDE'::text, 'NOITE'::text]))
+Referenced by:
+    TABLE "aluno" CONSTRAINT "const_turma" FOREIGN KEY (turma) REFERENCES turma(cod)
+```
+**PROFESSOR**
+```
+                   Table "public.professor"  
+Column |         Type          | Collation | Nullable | Default    
+--------+-----------------------+-----------+----------+---------  
+id     | integer               |           | not null |    
+nome   | character varying(50) |           |          |
+```
+
+**INNER JOIN**
+```sql
+SELECT * FROM aluno INNER JOIN turma ON turma=turma.cod;
+```
+```  
+nome    | turma | id | cod | prof_id | turno 
+-----------+-------+----+-----+---------+-------
+ luis      | 43    |  1 | 43  |     662 | NOITE
+ guilherme | 42    |  0 | 42  |     732 | MANHA
+```
+```sql
+SELECT * FROM turma INNER JOIN professor ON prof_id=professor.id;
+```
+```
+cod | prof_id | turno | id  |  nome     
+-----+---------+-------+-----+--------  
+42  |     732 | MANHA | 732 | elaine  
+43  |     662 | NOITE | 662 | elisa
+```
+
+**LEFT OUTER JOIN**
+```sql
+SELECT * FROM turma LEFT OUTER JOIN professor ON prof_id=professor.id;
+```
+```
+cod | prof_id | turno | id  |  nome  
+-----+---------+-------+-----+--------
+ 42  |     732 | MANHA | 732 | elaine
+ 43  |     662 | NOITE | 662 | elisa
+ 23  |     777 | TARDE |     | 
+```
+
+**RIGHT OUTER JOIN**
+```sql
+SELECT * FROM turma RIGHT OUTER JOIN professor ON prof_id=professor.id;
+```
+```
+cod | prof_id | turno | id  |  nome     
+-----+---------+-------+-----+--------  
+42  |     732 | MANHA | 732 | elaine  
+43  |     662 | NOITE | 662 | elisa  
+    |         |       | 123 | farid
+```
+
+**FULL OUTER JOIN**
+```sql
+SELECT * FROM turma FULL OUTER JOIN professor ON prof_id=professor.id;
+```
+```
+cod | prof_id | turno | id  |  nome  
+-----+---------+-------+-----+--------
+ 42  |     732 | MANHA | 732 | elaine
+ 43  |     662 | NOITE | 662 | elisa
+ 23  |     777 | TARDE |     | 
+     |         |       | 123 | farid
+```
+
+---
+
