@@ -7,7 +7,7 @@
 ## Programa
 
 - **Introdução à computação paralela**: contexto e conceitos básicos;  
-Hardware paralelo para computação de alto desempenho: arquiteturas paralelas,  organizações de hardware que impactam o desempenho (processadores, memórias e redes de interconexão);  
+- **Hardware paralelo para computação de alto desempenho:** arquiteturas paralelas,  organizações de hardware que impactam o desempenho (processadores, memórias e redes de interconexão);  
 - **Projeto de software para computação de alto desempenho**: modelos de programação para aplicações paralelas, ferramentas para o desenvolvimento de aplicações paralelas (compiladores, bibliotecas e padrões), escalonamento de processos;  
 - **Avaliação de desempenho de sistemas computacionais de alto desempenho:** métricas e metodologias;  
 - **Desenvolvimento de aplicações paralelas:** estudos de caso;  
