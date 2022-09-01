@@ -76,3 +76,34 @@ Determina a eficiência no uso de $p$ processadores. $$E = \frac{Sp_p}{p}$$
 - SP linear (Sp = p) -> ideal, é o que buscamos.
 - SP sublinear (Sp < p) -> caso comum.
 - SP superlinear (Sp > p) -> pode acontecer
+
+## Arquiteturas Paralelas
+
+### Tipos de Paralelismo
+
+![](Pasted%20image%2020220901143747.png)
+
+#### Pipeline
+![](Pasted%20image%2020220901143820.png)
+
+#### Superescalar, VLWI, Stream de Instrução
+![](Pasted%20image%2020220901143842.png)
+
+#### Paralelismo a Nível de Threads
+![](Pasted%20image%2020220901143909.png)
+
+#### Taxonomia de Flynn
+![](Pasted%20image%2020220901143928.png)
+
+#### Taxonomia de Flynn e Modelos de Códigos
+![](Pasted%20image%2020220901143953.png)
+
+#### MIMD: Memória Distribuída e Compartilhada
+![](Pasted%20image%2020220901144021.png)
+
+#### Organização Lógica x Física
+![](Pasted%20image%2020220901144052.png)
+
+### Multiprocessadores: MIMD com Memória Compartilhada
+![](Pasted%20image%2020220901145432.png)
+
