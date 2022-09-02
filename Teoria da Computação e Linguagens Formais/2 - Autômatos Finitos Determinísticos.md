@@ -1,7 +1,12 @@
-# Autômatos Finitos
+# Autômatos Finitos Determinísticos
 
-Um AF deterministico (AFD) é denoyado formalmente por uma **quíntupla**
+Um AF deterministico (AFD) é denotado formalmente por uma **quíntupla**
 $(Q, \Sigma, \delta, q_o, F)$ .
+
+- $Q$ -> conjunto finito de estados;
+- $q_o$ -> é um elemento de $Q$;
+- $F \subseteq Q$ -> é um conjunto de estados finais;
+- $\delta$ -> é a função total, chamada de função de transição, de $Q\times \Sigma$ a $Q$
 
 ## Esquema da Máquina e Representação usando Grafos
 

@@ -1,4 +1,4 @@
-**2) Escreva um autômato que recebe como entrada números binários e que aceita cadeias representando os números múltiplos de 5.**
+**1) Escreva um autômato que recebe como entrada números binários e que aceita cadeias representando os números múltiplos de 5.**
 
 $5_{10} \equiv 101_2$
 
