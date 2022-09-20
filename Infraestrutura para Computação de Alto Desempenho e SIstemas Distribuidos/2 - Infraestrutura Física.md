@@ -1,0 +1,6 @@
+# Infraestrutura Física
+
+## Componentes
+
+Granularidade Grossa: servidores, bases de dados...
+Granularidade Fina: Placas de Redes, discors, placas mae, placas gráficas, ...
